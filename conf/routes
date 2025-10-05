@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes
+
+GET     /assets/*file           controllers.Assets.versioned(path="/public", file: Asset)
+GET     /                       controllers.HomeController.index()
+GET     /new                    controllers.HomeController.newPostForm
+POST    /add                    controllers.HomeController.addPost()
+POST    /delete/:title          controllers.HomeController.deletePost(title: String)
+POST   /update/:oldTitle   controllers.HomeController.updatePost(oldTitle: String)
+
+
+
+GET     /edit/:title            controllers.HomeController.editPostForm(title: String)
+

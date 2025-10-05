@@ -1,0 +1,23 @@
+@(posts: List[models.BlogPost])
+
+@main("Blog Home") {
+    <h1>Blog Posts</h1>
+    <ul>
+        @for(post <- posts) {
+            <li>
+                <strong>@post.title</strong><br/><br/>
+                @post.content <br/>
+
+                <form action="@routes.HomeController.deletePost(post.title)" method="POST" style="display:inline;">
+                    <button type="submit" class="delete-button" onclick="return confirm('Are you sure you want to delete this post?');">Delete</button>
+                </form>
+
+                <a href="@routes.HomeController.editPostForm(post.title)">
+                    <button type="button">Edit</button>
+                </a>
+            </li>
+        }
+    </ul>
+
+    <a href="@routes.HomeController.newPostForm">Add New Post</a>
+}

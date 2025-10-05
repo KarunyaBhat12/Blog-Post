@@ -1,0 +1,19 @@
+@(post: models.BlogPost)
+
+@main("Edit Blog Post") {
+    <h1>Edit Blog Post</h1>
+
+    <form action="@routes.HomeController.updatePost(post.title)" method="POST">
+        <input type="hidden" name="oldTitle" value="@post.title">
+
+        <label>Title:</label><br/>
+        <input type="text" name="title" value="@post.title"><br/><br/>
+
+        <label>Content:</label><br/>
+        <textarea name="content" rows="5">@post.content</textarea><br/>
+
+        <button type="submit">Update</button>
+    </form>
+
+    <a href="@routes.HomeController.index()">← Back to Home</a>
+}

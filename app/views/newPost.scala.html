@@ -1,0 +1,37 @@
+@main("New Blog Post") {
+    <h1>New Blog Post</h1>
+
+    <div class="form-box">
+        <form action="@routes.HomeController.addPost()" method="POST">
+            <label for="title">Title:   </label>
+            <input type="text" name="title" id="title"><br/>
+            <br/>
+            <label for="content">Content: <br/></label> <br/>
+            <textarea name="content" id="content" rows="5"></textarea><br/>
+
+            <button type="submit">Add Post</button>
+        </form>
+    </div>
+
+    <a href="@routes.HomeController.index()">← Back to Home</a>
+
+    <style>
+        .form-box {
+            background: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 50px 150px rgba(47, 3, 131, 0.1);
+            max-width: 820px;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 90%;
+            margin-bottom: 15px;
+        }
+    </style>
+}
