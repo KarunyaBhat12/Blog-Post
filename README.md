@@ -1,9 +1,9 @@
 
-Blog-Post
+**Blog-Post**
 
 Welcome to the Blog-Post repository! This project is a Scala-based blogging application built using the Play Framework. It's designed to help you manage and publish blog posts effortlessly.
 
-Features
+**Features**
 
 CRUD Operations: Create, Read, Update, and Delete blog posts.
 
@@ -13,7 +13,7 @@ MVC Architecture: Follows the Model-View-Controller pattern for organized code s
 
 Responsive Design: Optimized for both desktop and mobile views.
 
-Technologies Used
+**Technologies Used**
 
 Backend: Scala with Play Framework
 
@@ -21,8 +21,8 @@ Database: SQLite
 
 Frontend: HTML, CSS, and Scala templates
 
-Getting Started
-Prerequisites
+**Getting Started
+Prerequisites**
 
 Ensure you have the following installed:
 
@@ -32,15 +32,15 @@ Scala
 
 sbt
 
-Installation
+**Installation**
 
-Clone the repository:
+**Clone the repository:**
 
 git clone https://github.com/KarunyaBhat12/Blog-Post.git
 cd Blog-Post
 
 
-Run the application:
+**Run the application:**
 
 sbt run
 
@@ -48,7 +48,7 @@ sbt run
 Open your browser and navigate to http://localhost:9000
  to access the application.
 
-Folder Structure
+**Folder Structure**
 
 app/: Contains the main application code.
 
